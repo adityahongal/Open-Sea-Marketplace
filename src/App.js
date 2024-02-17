@@ -1,14 +1,15 @@
-
+import React from "react";
+import AppRoutes from "./Routes";
+import { BrowserRouter } from "react-router-dom";
+import { ScrollToTop } from "./components/Common";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          APP.js
-        </p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ScrollToTop>
+        <AppRoutes />
+      </ScrollToTop>
+    </BrowserRouter>
   );
 }
 
