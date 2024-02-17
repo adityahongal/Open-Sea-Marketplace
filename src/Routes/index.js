@@ -18,7 +18,7 @@ const AppRoutes = () => {
                 <Helmet>
                   <title>{`${pageTitle && `${pageTitle} - `}BIGSEA`}</title>
                 </Helmet>
-                
+                  <Layout>
                   <Suspense fallback={
                     <Center h={window.innerHeight} w={"full"} flex={1}>
                       <Spinner 
@@ -32,7 +32,7 @@ const AppRoutes = () => {
                   }>
                     <Component />
                   </Suspense>
-                
+                  </Layout>
               </>
             }
           />
