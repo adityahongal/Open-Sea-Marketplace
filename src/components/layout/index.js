@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { VStack, Box } from "@chakra-ui/react";
 import NavBar from "./navbar";
+import Footer from "./footer";
 
 const Layout = ({ children }) => {
     return (
@@ -10,10 +11,10 @@ const Layout = ({ children }) => {
         <NavBar />
       </Box>
       <VStack spacing={0} align={"start"} w={"full"} flex={1}>
-        {/* {children} */}
+        {children}
       </VStack>
       <Box width={"full"}>
-        {/* <Footer /> */}
+        <Footer />
       </Box>
     </VStack>
     );

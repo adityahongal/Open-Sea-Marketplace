@@ -4,7 +4,7 @@ export const footerNavitems = [
         children: [
             {
                 item: "About",
-                link: "/about"
+                link: "#"
             },
             {
                 item: "Help Center",
