@@ -1,17 +1,14 @@
 import React from "react";
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+
+import {
+  Landing
+} from "./../components/Home";
 
 const Home = () => {
   return (
     <Box w={"full"} flex={1}>
-      <Text
-        bgGradient="linear(to-l, #7669CA, #FA1180)"
-        bgClip="text"
-        fontSize="6xl"
-        fontWeight="extrabold"
-      >
-        Welcome to Home Page
-      </Text>
+        <Landing/>
     </Box>
   );
 };
