@@ -1,14 +1,40 @@
 import { Card, CardBody, Flex } from "@chakra-ui/react";
 import { Text, Image, Stack, Heading } from "@chakra-ui/react";
+import { Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
+// import required modules
+import { Pagination, Navigation } from 'swiper';
 
 const Landing = () => {
   return (
+    <Swiper
+        spaceBetween={50}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+      >
     <Flex spacing={4}>
+    <SwiperSlide>
     <Card maxW="sm" minw="200" _hover={{ background: "red.100", cursor: "pointer" }}>
       <CardBody>
         <Image
           src="https://i.seadn.io/s/raw/files/0a0bf8ac84328fd6d1a56442999a0567.jpg?auto=format&dpr=1&w=384"
-          alt="Green double couch with wooden legs"
+          alt="sequels"
           borderRadius="lg"
         />
         <Stack mt="6" spacing="3">
@@ -21,12 +47,14 @@ const Landing = () => {
         </Stack>
       </CardBody>
       </Card>
+      </SwiperSlide>  
 
+      <SwiperSlide>     
       <Card maxW="sm" minw="200" _hover={{ background: "red.100", cursor: "pointer" }}>
       <CardBody>
         <Image
           src="https://i.seadn.io/s/raw/files/a24b23968a93875707c783dba76741b3.png?auto=format&dpr=1&w=384"
-          alt="Green double couch with wooden legs"
+          alt="contra boy"
           borderRadius="lg"
         />
         <Stack mt="6" spacing="3">
@@ -39,7 +67,9 @@ const Landing = () => {
         </Stack>
       </CardBody>
     </Card>
-
+    </SwiperSlide>
+      
+    <SwiperSlide> 
     <Card maxW="sm" minw="200" _hover={{ background: "red.100", cursor: "pointer" }}>
       <CardBody>
         <Image
@@ -57,7 +87,9 @@ const Landing = () => {
         </Stack>
       </CardBody>
     </Card>
+    </SwiperSlide> 
 
+    <SwiperSlide> 
     <Card maxW="sm" minw="200" _hover={{ background: "red.100", cursor: "pointer" }}>
       <CardBody>
         <Image
@@ -75,8 +107,10 @@ const Landing = () => {
         </Stack>
       </CardBody>
     </Card>
-
+    </SwiperSlide>
+    
     </Flex>
+    </Swiper>
   );
 };
 
