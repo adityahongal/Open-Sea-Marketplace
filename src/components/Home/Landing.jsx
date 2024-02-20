@@ -1,4 +1,4 @@
-import { Card, CardBody, Flex } from "@chakra-ui/react";
+import { Card, CardBody } from "@chakra-ui/react";
 import { Text, Image, Stack, Heading } from "@chakra-ui/react";
 import { Autoplay, Grid } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -61,7 +61,7 @@ const Landing = () => {
   ];
 
   return (
-    // <Flex alignItems='center'>
+    
     <Swiper
         slidesPerView="auto"
         spaceBetween={5}
@@ -106,7 +106,7 @@ const Landing = () => {
       ))}
      
     </Swiper>
-    // </Flex>
+    
   );
 };
 
