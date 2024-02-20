@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Center } from "@chakra-ui/react";
 
 import {
   Landing
@@ -7,7 +7,7 @@ import {
 
 const Home = () => {
   return (
-    <Box w={"full"} flex={1}>
+    <Box>
         <Landing/>
     </Box>
   );

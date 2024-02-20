@@ -6,17 +6,21 @@ import Footer from "./footer";
 
 const Layout = ({ children }) => {
     return (
-        <VStack spacing={0} align={"start"} minH={"100vh"}>
+      <>
+
       <Box width={"full"}>
         <NavBar />
       </Box>
-      <VStack spacing={0} align={"start"} w={"full"} flex={1}>
+      <Box>
+      <Box w={"full"}>
         {children}
-      </VStack>
+      </Box>
+      </Box>
       <Box width={"full"}>
         <Footer />
       </Box>
-    </VStack>
+
+    </>
     );
 };
 

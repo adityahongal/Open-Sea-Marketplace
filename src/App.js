@@ -7,6 +7,7 @@ import theme from "./utils/theme";
 
 function App() {
   return (
+    <> 
     <BrowserRouter>
       <ChakraProvider theme={theme}>
         <ScrollToTop>
@@ -14,6 +15,8 @@ function App() {
         </ScrollToTop>
       </ChakraProvider>
     </BrowserRouter>
+    
+    </>
   );
 }
 

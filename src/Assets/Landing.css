@@ -1,26 +1,11 @@
-/* .swiper-slide {
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}*/
 
 .swiper {
-    padding: 50px;
-}
-
-.swiper-container {
-  width: 100%; /* Make sure swiper container takes full width */
-  overflow: hidden; /* Hide overflow to prevent unwanted scrollbars */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .swiper-slide {
-  width: auto; /* Set width of individual slide to auto */
-  margin: 0 10px; /* Add margin between slides */
+  margin: 0;
 }
 
-/* Optional: If you want the cards to be displayed inline */
-.swiper-slide {
-  display: inline-block;
-}
+
