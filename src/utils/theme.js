@@ -7,7 +7,7 @@ const config = {
   };
 
 const theme = extendTheme({
-    fonts: {
+    font: {
         body: "Roboto Slab, serif",
         heading: "Roboto Slab, serif",
     },

@@ -1,11 +1,6 @@
-
-.swiper {
-  margin-left: auto;
-  margin-right: auto;
+.Flex {
+  border-radius: 50px; /* Rounded corners */
+  box-shadow: 0 px 30px 60px rgba(0, 0, 0, 0.16), 0px 30px 60px rgba(0, 0, 0, 0.23); /* Drop shadow */
+  background-size: cover;
+  box-sizing: border-box;
 }
-
-.swiper-slide {
-  margin: 0;
-}
-
-
