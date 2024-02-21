@@ -1,4 +1,5 @@
-// // This is done using react slick sliders
+// This is done using chakra carousel
+
 
 import { Box, Image } from "@chakra-ui/react";
 import React, { useEffect, useRef } from "react";
@@ -23,6 +24,8 @@ import {
   Flex,
   Tag,
 } from "@chakra-ui/react";
+
+import ChakraCarousel from "../../Assets/ChakraCarousel";
 
 // import style from CSS
 import "../../Assets/Landing.css";
@@ -86,34 +89,6 @@ const data = [
 ];
 
 const Landing = () => {
-  const sliderRef = useRef();
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      sliderRef.current.slickNext();
-    }, 3000); // Change slide every 3 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3, // Display 3 images per slide
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 768, // Adjust settings for smaller screens
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <Box>
       <ChakraProvider theme={extendTheme(theme)}>
@@ -129,7 +104,7 @@ const Landing = () => {
             xxl: "87.5rem",
           }}
         >
-          <Slider ref={sliderRef} {...settings}> 
+          <ChakraCarousel gap={32}>
             {data.map((item, index) => (
               <Box key={index} px={2}>
               <Flex
@@ -147,10 +122,10 @@ const Landing = () => {
               >
                 <VStack mb={6}>
                 <Image
-                src={item.image}
-                w="100%" // Set width to 100%
-                      h="auto" 
-                objectFit="cover"/>
+                  src={item.image}
+                  w="100%" // Set width to 100%
+                  h="auto" 
+                  objectFit="cover"/>
                   <Heading
                     fontSize={{ base: "xl", md: "2xl" }}
                     textAlign="left"
@@ -171,7 +146,7 @@ const Landing = () => {
               </Flex>
               </Box>
             ))}
-          </Slider> 
+          </ChakraCarousel>
         </Container>
       </ChakraProvider>
     </Box>
